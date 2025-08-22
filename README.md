@@ -21,6 +21,12 @@ Sebuah sistem arsip digital anonim yang dirancang untuk menyimpan dan mengelola 
 * **Pemutar Musik:** Terdapat pemutar musik latar yang bisa diatur dan diganti, menambah suasana yang dramatis saat browsing.
 * **Keamanan:** Sistem login dan logout yang aman dengan pengamanan sesi untuk dasbor administrator.
 * **Halaman Error Khusus:** Tampilan halaman error 403 dan 404 yang disesuaikan agar tetap serasi dengan tema proyek.
+-----
+## 📊 Informasi Proyek
+| Dibuat oleh | Versi  | Status  | Lisensi |
+|-------------|--------|---------|---------|
+| **FathurKazama** | 1.0.0  | Stabil  |  MIT License     |
+-----
 
 ## Cara Menggunakan
 
@@ -50,11 +56,7 @@ https://project.fathurkazama.id/login.php
    Demo Operator : Nakun / nakun$#1
 
    ------
-## 📊 Informasi Proyek
-| Dibuat oleh | Versi  | Status  | Lisensi |
-|-------------|--------|---------|---------|
-| **FathurKazama** | 1.0.0  | Stabil  | MIT License      |
-
+   
 ## Lisensi
 
 Proyek ini berada di bawah Lisensi MIT - lihat file [LICENSE](LICENSE) untuk detail selengkapnya.
