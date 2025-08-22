@@ -2,9 +2,8 @@
 
 My Website : https://my.fathurkazama.id
 
-My Facebook : Fathur ID
+My Facebook : https://facebook.com/fathur.yt.7
 ___________________________________
-Sistem arsip semi-publik yang digunakan untuk mendokumentasikan dan mempublikasikan berkas kasus. Pengunjung dapat meninjau kasus-kasus yang sudah diarsipkan, sementara staf berwenang memiliki kendali penuh atas manajemennya.
 
 ![Screenshot Desktop Website](thumbs/demo.png) 
 
