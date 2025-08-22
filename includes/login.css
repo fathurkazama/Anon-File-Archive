@@ -1,0 +1,190 @@
+:root {
+  --bg-primary: #0d0d0d;
+  --bg-card: #1a1a1a;
+  --bg-tertiary: #222;
+  --text-primary: #eee;
+  --primary: #00d084;
+  --primary-dark: #00b36b;
+  --danger: #ef4444;
+  --border-secondary: #333;
+  --radius-md: 8px;
+  --radius-xl: 16px;
+  --shadow-xl: 0 10px 30px rgba(0,0,0,0.4);
+  --transition: all 0.3s ease;
+}
+
+body.login-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--bg-primary);
+  overflow: hidden;
+}
+
+.login-container {
+  position: relative;
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  padding: 2.5rem;
+  background: var(--bg-card);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--border-secondary);
+  animation: fadeIn 0.8s ease-out;
+  z-index: 1;
+}
+
+.login-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+  position: relative;
+  z-index: 4; /* pastiin tetap di atas glitch */
+}
+
+.form-control {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-secondary);
+  color: var(--text-primary);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  width: 100%;
+  margin-bottom: 1rem;
+  transition: var(--transition);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(0, 208, 132, 0.2);
+}
+
+.btn-login {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-login:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 208, 132, 0.3);
+}
+
+.alert-error {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--danger);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+/* background glitch lines */
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+body::before {
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.02) 0,
+    rgba(255, 255, 255, 0.02) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  animation: glitch-line 2s infinite linear alternate-reverse;
+}
+
+body::after {
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 208, 132, 0.02) 0,
+    rgba(0, 208, 132, 0.02) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  animation: glitch-line-reverse 2s infinite linear alternate;
+}
+
+/* glitch text overlays */
+.login-container::before,
+.login-container::after {
+  content: 'LOGIN';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 2.5rem;
+  padding-top: 2.5rem;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.login-container::before {
+  animation: glitch-effect 3s infinite linear alternate-reverse;
+  left: 2px;
+  color: var(--primary);
+  opacity: 0.8;
+  text-shadow: 0 0 5px var(--primary);
+}
+
+.login-container::after {
+  animation: glitch-effect-2 3s infinite linear alternate;
+  left: -2px;
+  color: var(--danger);
+  opacity: 0.8;
+  text-shadow: 0 0 5px var(--danger);
+}
+
+/* animations */
+@keyframes glitch-effect {
+  0% { transform: translate(0); }
+  20% { transform: translate(-5px, 5px); }
+  40% { transform: translate(-5px, -5px); }
+  60% { transform: translate(5px, 5px); }
+  80% { transform: translate(5px, -5px); }
+  100% { transform: translate(0); }
+}
+
+@keyframes glitch-effect-2 {
+  0% { transform: translate(0); }
+  20% { transform: translate(5px, -5px); }
+  40% { transform: translate(5px, 5px); }
+  60% { transform: translate(-5px, -5px); }
+  80% { transform: translate(-5px, 5px); }
+  100% { transform: translate(0); }
+}
+
+@keyframes glitch-line {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50vh); }
+}
+
+@keyframes glitch-line-reverse {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(50vh); }
+}
