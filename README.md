@@ -1,36 +1,51 @@
-# Anon-File-Archive
-Web : fathurkazama.id
+# Anon-FiAnon-File-Archive
 
-Fb : Fathur ID
+https://my.idfathurkazama.id
+
+Facebook : Fathur ID
 ___________________________________
 Sistem arsip semi-publik yang digunakan untuk mendokumentasikan dan mempublikasikan berkas kasus. Pengunjung dapat meninjau kasus-kasus yang sudah diarsipkan, sementara staf berwenang memiliki kendali penuh atas manajemennya.
 
 ![Screenshot Desktop Website](thumbs/demo.png) 
 
-Uploader File Menggunakan API dari https://catbox.moe
-Mengurangi resiko penyimpanan penuh. 
-Untuk Uploader Thumbnail menggunakan Lokal. 
+# Deskripsi Proyek
+
+Sebuah sistem arsip digital anonim yang dirancang untuk menyimpan dan mengelola berkas kasus secara efisien. Proyek ini menggunakan **API Catbox.moe** untuk unggah file utama, sehingga mengurangi beban penyimpanan server, sementara thumbnail tetap disimpan secara lokal untuk performa yang optimal.
 
 ## Fitur Utama
 
--   **Responsive:** Tampilan optimal di desktop, tablet, dan smartphone.
--   **Minimalis:** Efek transisi dan scroll yang elegan untuk pengalaman pengguna yang menyenangkan.
--   **Anon:** Tampilan Depan dan Dashboard bertema Anonim 
--   **Simple:** Mudah dipasang dan dimengerti, hanya menggunakan PHP dan database JSON
--   **Anonim:** Private post, case, memiliki tingkatan dari Biasa, Normal, Dan Priority.
--   **Live View:** Dilengkapi Live View Untuk setiap Post yang di Publish. 
--   **Music:** Bisa Play dan Ganti Musik
-  
+* **Desain Responsif & Minimalis:** Tampilan yang adaptif di berbagai perangkat, dilengkapi dengan efek transisi dan scroll yang elegan untuk pengalaman pengguna yang nyaman.
+* **Identitas Anonim:** Menghadirkan tema anonim yang konsisten pada tampilan depan dan dasbor, memberikan kesan misterius dan profesional.
+* **Manajemen Sederhana:** Mudah dipasang dan dipahami, hanya memerlukan PHP dan database berbasis JSON, membuatnya praktis untuk dikelola.
+* **Privasi Terkendali:** Setiap post atau berkas memiliki tingkat privasi dari **Biasa**, **Normal**, hingga **Prioritas**, memungkinkan pengelolaan konten yang lebih terstruktur.
+* **Live View:** Dilengkapi dengan fitur Live View yang memungkinkan pengguna melihat statistik real-time untuk setiap post yang diterbitkan.
+* **Pemutar Musik:** Terdapat pemutar musik latar yang bisa diatur dan diganti, menambah suasana yang dramatis saat browsing.
+* **Keamanan:** Sistem login dan logout yang aman dengan pengamanan sesi untuk dasbor administrator.
+* **Halaman Error Khusus:** Tampilan halaman error 403 dan 404 yang disesuaikan agar tetap serasi dengan tema proyek.
+
 ## Cara Menggunakan
 
-1.  Clone repositori ini:
-    `git clone https://github.com/fathurkazama/anon-file-archive`
-2.  Pastikan minimal Shared Hosting
-3.  Estrak dan Integrasi melalui Dashboard
+1.  **Clone Repositori:**
+    `git clone [https://github.com/fathurkazama/Anon-File-Archive]`
+2.  **Siapkan Server Lokal:**
+    Pastikan kamu memiliki server lokal (seperti XAMPP, Laragon, atau MAMP).
+3.  **Akses Proyek:**
+    Buka browser dan kunjungi `http://localhost/[nama_folder_proyek_kamu]`.
+
+## Teknologi yang Digunakan
+
+* PHP
+* HTML5 & CSS3
+* JavaScript
+* Font Awesome (untuk ikon)
+
+**Selamat menggunakan proyek ini!**
+
 
    Demo login : admin / admin123
    
    Demo Operator : Nakun / nakun$#1
+
 
 ## Lisensi
 
