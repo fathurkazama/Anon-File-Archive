@@ -1,0 +1,10 @@
+# Rewrite Engine
+RewriteEngine On
+
+ErrorDocument 404 /404.php
+ErrorDocument 403 /403.php
+
+<FilesMatch "\.(env|git|json|log|ini|bak|sql|htaccess)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
