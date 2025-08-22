@@ -49,6 +49,11 @@ https://project.fathurkazama.id/login.php
    
    Demo Operator : Nakun / nakun$#1
 
+   ------
+## 📊 Informasi Proyek
+| Dibuat oleh | Versi  | Status  | Lisensi |
+|-------------|--------|---------|---------|
+| **FathurKazama** | 1.0.0  | Stabil  | MIT License      |
 
 ## Lisensi
 
