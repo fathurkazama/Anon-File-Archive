@@ -38,7 +38,7 @@ Sebuah sistem arsip digital anonim yang dirancang untuk menyimpan dan mengelola 
 * JavaScript
 * Font Awesome (untuk ikon)
 
-**Selamat menggunakan proyek ini!**
+**Selamat menggunakan proyek ini coy!**
 
 Demo : 
 
@@ -56,5 +56,5 @@ Proyek ini berada di bawah Lisensi MIT - lihat file [LICENSE](LICENSE) untuk det
 
 ## Kredit
 
--   Desain terinspirasi dari berbagai dribbble shot dan website portfolio teman-teman. 
--   Foto-foto demo dari Unsplash.
+-   Desain terinspirasi dari berbagai website arsip
+-   Foto-foto demo dari saya sendiri
