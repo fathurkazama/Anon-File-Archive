@@ -1,6 +1,6 @@
-# Anon-FiAnon-File-Archive
+# Anon-File-Archive
 
-Website : https://my.idfathurkazama.id
+Website : https://my.fathurkazama.id
 
 Facebook : Fathur ID
 ___________________________________
@@ -26,11 +26,11 @@ Sebuah sistem arsip digital anonim yang dirancang untuk menyimpan dan mengelola 
 ## Cara Menggunakan
 
 1.  **Clone Repositori:**
-    `git clone [https://github.com/fathurkazama/Anon-File-Archive]`
+    `git clone 'https://github.com/fathurkazama/Anon-File-Archive'
 2.  **Siapkan Server Lokal:**
     Pastikan kamu memiliki server lokal (seperti XAMPP, Laragon, atau MAMP).
 3.  **Akses Proyek:**
-    Buka browser dan kunjungi `http://localhost/[nama_folder_proyek_kamu]`.
+    Buka browser dan kunjungi `http://localhost/Anon-File-Archive`.
 
 ## Teknologi yang Digunakan
 
