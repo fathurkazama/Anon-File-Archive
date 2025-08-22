@@ -1,8 +1,8 @@
 # Anon-File-Archive
 
-Website : https://my.fathurkazama.id
+My Website : https://my.fathurkazama.id
 
-Facebook : Fathur ID
+My Facebook : Fathur ID
 ___________________________________
 Sistem arsip semi-publik yang digunakan untuk mendokumentasikan dan mempublikasikan berkas kasus. Pengunjung dapat meninjau kasus-kasus yang sudah diarsipkan, sementara staf berwenang memiliki kendali penuh atas manajemennya.
 
