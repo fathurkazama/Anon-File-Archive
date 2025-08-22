@@ -18,8 +18,9 @@ Untuk Uploader Thumbnail menggunakan Lokal.
 -   **Anon:** Tampilan Depan dan Dashboard bertema Anonim 
 -   **Simple:** Mudah dipasang dan dimengerti, hanya menggunakan PHP dan database JSON
 -   **Anonim:** Private post, case, memiliki tingkatan dari Biasa, Normal, Dan Priority.
--   **Live View:** Dilengkapi live view untuk setiap Post yang di Publish. 
-
+-   **Live View:** Dilengkapi Live View Untuk setiap Post yang di Publish. 
+-   **Music:** Bisa Play dan Ganti Musik
+  
 ## Cara Menggunakan
 
 1.  Clone repositori ini:
