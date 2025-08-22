@@ -21,11 +21,12 @@ Untuk Uploader Thumbnail menggunakan Lokal.
 ## Cara Menggunakan
 
 1.  Clone repositori ini:
-    `git clone https://github.com/username/designer-portfolio-website.git`
+    `git clone https://github.com/fathurkazama/anon-file-archive`
 2.  Pastikan minimal Shared Hosting
-3.  Estrak dan Integrasi melalu Dashboard
+3.  Estrak dan Integrasi melalui Dashboard
 
    Demo login : admin / admin123
+   
    Demo Operator : Nakun / nakun$#1
 
 ## Lisensi
