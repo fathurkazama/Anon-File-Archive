@@ -52,16 +52,15 @@ if(isset($_POST['add'])){
 
         $ch = curl_init();
         $postFields = [
-            'reqtype'=>'fileupload',
-            'userhash'=>'6018bfdbe03db0d8cead98018',
-            'fileToUpload'=> new CURLFile($filePath, mime_content_type($filePath), $fileOriginalName)
+            'reqtype' => 'fileupload',
+            'fileToUpload' => new CURLFile($filePath, mime_content_type($filePath), $fileOriginalName)
         ];
-        curl_setopt_array($ch,[
-            CURLOPT_URL=>'https://catbox.moe/user/api.php',
-            CURLOPT_POST=>true,
-            CURLOPT_RETURNTRANSFER=>true,
-            CURLOPT_POSTFIELDS=>$postFields,
-            CURLOPT_USERAGENT=>'Mozilla/5.0'
+        curl_setopt_array($ch, [
+            CURLOPT_URL => 'https://catbox.moe/user/api.php',
+            CURLOPT_POST => true,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_POSTFIELDS => $postFields,
+            CURLOPT_USERAGENT => 'Mozilla/5.0'
         ]);
         $response = curl_exec($ch);
         curl_close($ch);
@@ -107,45 +106,44 @@ if(isset($_POST['edit_post'])){
 
             $ch = curl_init();
             $postFields = [
-                'reqtype'=>'fileupload',
-                'userhash'=>'6018bfdbe03db0d8cead98018',
-            'fileToUpload'=> new CURLFile($filePath, mime_content_type($filePath), $fileOriginalName)
-        ];
-        curl_setopt_array($ch,[
-            CURLOPT_URL=>'https://catbox.moe/user/api.php',
-            CURLOPT_POST=>true,
-            CURLOPT_RETURNTRANSFER=>true,
-            CURLOPT_POSTFIELDS=>$postFields,
-            CURLOPT_USERAGENT=>'Mozilla/5.0'
-        ]);
-        $response = curl_exec($ch);
-        curl_close($ch);
+                'reqtype' => 'fileupload',
+                'fileToUpload' => new CURLFile($filePath, mime_content_type($filePath), $fileOriginalName)
+            ];
+            curl_setopt_array($ch, [
+                CURLOPT_URL => 'https://catbox.moe/user/api.php',
+                CURLOPT_POST => true,
+                CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_POSTFIELDS => $postFields,
+                CURLOPT_USERAGENT => 'Mozilla/5.0'
+            ]);
+            $response = curl_exec($ch);
+            curl_close($ch);
 
-        if($response && filter_var($response, FILTER_VALIDATE_URL)){
-            $filesData[$index]['file'] = $response;
-            $filesData[$index]['download_link'] = $response;
+            if($response && filter_var($response, FILTER_VALIDATE_URL)){
+                $filesData[$index]['file'] = $response;
+                $filesData[$index]['download_link'] = $response;
+            } else {
+                if(!is_dir('uploads')) mkdir('uploads',0777,true);
+                $fileName = time()."_".$fileOriginalName;
+                move_uploaded_file($filePath, "uploads/".$fileName);
+                $filesData[$index]['file'] = "uploads/".$fileName;
+                $filesData[$index]['download_link'] = "uploads/".$fileName;
+            }
         } else {
-            if(!is_dir('uploads')) mkdir('uploads',0777,true);
-            $fileName = time()."_".$fileOriginalName;
-            move_uploaded_file($filePath, "uploads/".$fileName);
-            $filesData[$index]['file'] = "uploads/".$fileName;
-            $filesData[$index]['download_link'] = "uploads/".$fileName;
+            $filesData[$index]['download_link'] = $_POST['download_link'];
         }
-    } else {
-        $filesData[$index]['download_link'] = $_POST['download_link'];
-    }
 
-    if(!empty($_FILES['thumbnail']['name'])){
-        if(!is_dir('thumbs')) mkdir('thumbs',0777,true);
-        $thumbName = time()."_".basename($_FILES['thumbnail']['name']);
-        move_uploaded_file($_FILES['thumbnail']['tmp_name'], "thumbs/".$thumbName);
-        if(!empty($filesData[$index]['thumbnail'])) @unlink('thumbs/'.$filesData[$index]['thumbnail']);
-        $filesData[$index]['thumbnail'] = $thumbName;
-    }
+        if(!empty($_FILES['thumbnail']['name'])){
+            if(!is_dir('thumbs')) mkdir('thumbs',0777,true);
+            $thumbName = time()."_".basename($_FILES['thumbnail']['name']);
+            move_uploaded_file($_FILES['thumbnail']['tmp_name'], "thumbs/".$thumbName);
+            if(!empty($filesData[$index]['thumbnail'])) @unlink('thumbs/'.$filesData[$index]['thumbnail']);
+            $filesData[$index]['thumbnail'] = $thumbName;
+        }
 
-    file_put_contents($filesPath,json_encode($filesData,JSON_PRETTY_PRINT));
-    $edit_success = "Post updated!";
-}
+        file_put_contents($filesPath,json_encode($filesData,JSON_PRETTY_PRINT));
+        $edit_success = "Post updated!";
+    }
 }
 
 if(isset($_GET['delete'])){
